@@ -1,0 +1,8 @@
+/node_modules
+/dist
+/storybook-static
+/src/i18n/translations.json
+/coverage
+/.env
+/package-lock.json
+.idea
