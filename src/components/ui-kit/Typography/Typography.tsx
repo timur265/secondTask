@@ -3,16 +3,7 @@ import classes from "./Typography.module.css";
 import cn from "clsx";
 
 type TypographyProps = {
-  variant:
-  | "p"
-  | "h1"
-  | "h2"
-  | "h3"
-  | "h4"
-  | "h5"
-  | "li"
-  | "span"
-  | "label"
+  variant: "p" | "h1" | "h2" | "h3" | "h4" | "h5" | "li" | "span" | "label";
   children: React.ReactChild | string[];
   className?: string;
   style?: React.CSSProperties;

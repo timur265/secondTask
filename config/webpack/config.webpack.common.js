@@ -9,10 +9,10 @@ module.exports = {
   entry: path.resolve(__dirname, "../..", "src", "index.tsx"),
   output: {
     filename: "main.js",
-    path:path.resolve(__dirname, "../..", "dist"),
+    path: path.resolve(__dirname, "../..", "dist"),
   },
   devServer: {
-    port: 3000
+    port: 3000,
   },
   module: {
     rules: [
@@ -89,4 +89,4 @@ module.exports = {
       src: path.resolve(__dirname, "../../src/"),
     },
   },
-  }
+};

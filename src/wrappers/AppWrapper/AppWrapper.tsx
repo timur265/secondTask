@@ -6,9 +6,7 @@ interface AppWrapperProps {
 
 class AppWrapper extends PureComponent<AppWrapperProps> {
   render(): React.ReactNode {
-    return (
-      <>{this.props.children}</>
-    );
+    return <>{this.props.children}</>;
   }
 }
 
