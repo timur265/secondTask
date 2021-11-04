@@ -9,12 +9,15 @@
     "start:local": "cross-env DOTENV=.env.local webpack-dev-server --config config/webpack/config.webpack.development.js",
     "build:dev": "webpack --config config/webpack/config.webpack.development.js && es-check es5 './dist/**/*.js'",
     "build:prod": "webpack --config config/webpack/config.webpack.production.js && es-check es5 './dist/**/*.js'",
+    "lint:check": "npm run lint:prettier:check . && npm run lint:tsc:check && npm run lint:eslint:check . && npm run lint:stylelint:check .",
+    "lint:write": "npm run lint:prettier:write . && npm run lint:eslint:write . && npm run lint:stylelint:write .",
     "lint:prettier:check": "prettier --check --ignore-path .gitignore",
     "lint:prettier:write": "prettier --write --ignore-path .gitignore",
     "lint:eslint:check": "eslint --ext .ts,.tsx --ignore-path .gitignore",
     "lint:eslint:write": "eslint --ext .ts,.tsx --ignore-path .gitignore --fix",
     "lint:stylelint:check": "stylelint --ignore-path .gitignore",
-    "lint:stylelint:write": "stylelint --fix --ignore-path .gitignore"
+    "lint:stylelint:write": "stylelint --fix --ignore-path .gitignore",
+    "lint:tsc:check": "tsc --noEmit"
   },
   "dependencies": {
     "@babel/core": "^7.16.0",
