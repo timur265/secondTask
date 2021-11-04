@@ -1,6 +1,9 @@
 {
   "name": "test-ex",
   "version": "1.0.0",
+  "engines": {
+    "npm": ">=6.14.0"
+  },
   "scripts": {
     "start": "webpack-dev-server --config config/webpack/config.webpack.development.js",
     "start:local": "cross-env DOTENV=.env.local webpack-dev-server --config config/webpack/config.webpack.development.js",
