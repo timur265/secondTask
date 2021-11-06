@@ -1,0 +1,19 @@
+@import "./themes/default.css";
+
+html {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-base);
+  letter-spacing: var(--letter-spacing-base);
+  line-height: var(--line-height-base);
+}
+
+body {
+  margin: 0;
+}
+
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: -40px;
+  list-style: none;
+}
