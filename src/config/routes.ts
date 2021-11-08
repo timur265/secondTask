@@ -1,5 +1,6 @@
 export const routes = {
-  home: "/",
+  countriesPage: "/",
+  countryPage: "/country/:countryId",
 } as const;
 
 export type Route = typeof routes[keyof typeof routes];
