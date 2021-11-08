@@ -1,0 +1,27 @@
+.cell:hover {
+  background-color: var(--color-bg-cell);
+  cursor: pointer;
+}
+
+.box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  height: 500px;
+  padding: 20px 50px;
+  background-color: var(--color-background);
+  box-shadow: 0 0 8px 0 var(--color-border-modal);
+  overflow-y: auto;
+  transform: translate(-50%, -50%);
+}
+
+.country {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border: 1px black solid;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+}

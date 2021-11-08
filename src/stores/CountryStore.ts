@@ -13,5 +13,11 @@ const CountryStore = () => ({
       return country.id == countryId;
     });
   },
+  findByRegion(region: string) {
+    const filteredCountries = this.countries.filter(function (country) {
+      return country.region == region;
+    });
+    return filteredCountries;
+  },
 });
 export default CountryStore;
