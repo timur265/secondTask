@@ -1,4 +1,10 @@
-import { Table, TableBody, TableCell, TableRow } from "@material-ui/core";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableRow,
+  TextField,
+} from "@material-ui/core";
 import React, { useEffect, useState } from "react";
 import Layout from "src/components/Layout";
 import { useAppContext } from "src/contexts/AppContext";
@@ -13,6 +19,7 @@ import cn from "clsx";
 const CountriesPage = observer(() => {
   const store = useAppContext();
   const [isLoading, setIsLoading] = useState(true);
+  const [searchValue, setSearchValue] = useState("");
   const history = useHistory();
 
   const load = async () => {
@@ -32,8 +39,9 @@ const CountriesPage = observer(() => {
   };
 
   const getAllCountries = () => {
-    return store.countryStore.all.map(
-      (country: LocalCountryType, index: number) => {
+    return store.countryStore
+      .findByName(searchValue)
+      .map((country: LocalCountryType) => {
         return (
           <TableRow
             className={cn(classes.row)}
@@ -46,8 +54,11 @@ const CountriesPage = observer(() => {
             <TableCell>{country.region}</TableCell>
           </TableRow>
         );
-      }
-    );
+      });
+  };
+
+  const setInputSearchValue = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchValue(event.target.value);
   };
 
   if (isLoading) {
@@ -60,6 +71,12 @@ const CountriesPage = observer(() => {
 
   return (
     <Layout>
+      <TextField
+        id="standard-basic"
+        label="Search"
+        onChange={setInputSearchValue}
+        variant="standard"
+      />
       <Table>
         <TableBody>
           <TableRow>

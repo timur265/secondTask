@@ -19,5 +19,11 @@ const CountryStore = () => ({
     });
     return filteredCountries;
   },
+  findByName(countryName: string) {
+    const filteredCountries = this.countries.filter(function (country) {
+      return country.name.match(countryName);
+    });
+    return filteredCountries;
+  },
 });
 export default CountryStore;
