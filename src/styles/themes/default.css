@@ -15,6 +15,16 @@
   --color-background: #fff;
   --color-danger: #b71c1c;
 
+  /* Nav */
+  --color-bg-navbar: #03a84e;
+  --color-bg-active-link-navbar: #066a34;
+
+  /* Countries Page */
+  --color-bg-row: #c6d0ca;
+
+  /* Country Page */
+  --color-bg-cell: var(--color-bg-row);
+
   /* fonts */
   --font-family-primary: helvetica neue, helvetica, arial, sans-serif;
   --font-family-secondary: georgia, times new roman, times, serif;
