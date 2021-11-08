@@ -1,0 +1,27 @@
+.nav-container {
+  background-color: var(--color-bg-navbar);
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.nav-menu a {
+  display: inline-block;
+  padding: 10px 20px;
+  color: var(--color-text-contrast);
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.nav-menu li:hover,
+.nav-menu li:focus,
+.nav-menu li:active {
+  background-color: var(--color-bg-active-link-navbar);
+}
+
+.container {
+  padding: 40px 100px;
+}

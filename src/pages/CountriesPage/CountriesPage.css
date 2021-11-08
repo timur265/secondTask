@@ -1,0 +1,4 @@
+.row:hover {
+  background-color: var(--color-bg-row);
+  cursor: pointer;
+}
