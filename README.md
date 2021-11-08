@@ -37,7 +37,6 @@ The project is built with Typescript using a strict config. If a 3rd-party libra
 
 The project is **not type-checked during development run-time**, because it should be made on the CI server.
 
-
 #### Styles 🎨
 
 The project uses CSS instead of those fancy CSS-in-JS solutions. There are a lot of disadvantages in CSS, such as:
