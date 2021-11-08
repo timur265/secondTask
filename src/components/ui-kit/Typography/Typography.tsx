@@ -16,7 +16,7 @@ const Typography = (props: TypographyProps) => {
   const Component = variant;
 
   const getClassName = (): string => {
-    const { fontWeight, color, variant, className } = props;
+    const { color, variant, className } = props;
     return cn({
       [classes.common]: true,
       [classes.p]: variant === "p",
