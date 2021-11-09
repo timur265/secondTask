@@ -1,9 +1,3 @@
-# Queue
-
-### Infrastructure
-
-![](q_infrastructure.png)
-
 ### Quick start
 
 List of commands:
@@ -83,6 +77,5 @@ So the solution is pretty straightforward - to list everything, which is require
 
 - `src/components` - Contains all the files which are used two or more times
 - `src/pages` - Contains directories of pages
-- `src/stores` - Contains next files: actions.ts, index.ts, reducers.ts
 - `src/services` - Constains directories which are mainly consist of two files `service` and `adapter`. The name of this pattern is the pattern `Service/Adapter` or another name of this pattern is `Map` by Martin Fowler. Service is responsible for business logic. The Adapter is the part which is responsible of accessing data from external service.
 - `src/wrappers` - Contains files which wrap pages
