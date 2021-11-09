@@ -4,13 +4,7 @@ import React from "react";
 import { routes } from "src/config/routes";
 import Typography from "../ui-kit/Typography";
 
-const Layout = (props: {
-  children: React.ReactNode;
-  setProducts?: Function;
-}) => {
-  if (props.setProducts) {
-    props.setProducts(1);
-  }
+const Layout = (props: { children: React.ReactNode }) => {
   return (
     <>
       <nav className={cn(classes.navContainer)}>
