@@ -4,7 +4,6 @@ List of commands:
 
 - `npm start` to start the project in development mode
 - `npm run build:prod` to build the project in production mode to the `/dist` folder. Use `npm run serve:app` to serve this folder locally with HTTPS support.
-- `npm test` to run unit and integration tests with [jest](https://jestjs.io/).
 - `npm run lint:check` to check the project using all available [linters](#linters-). This command should be a part of your CI setup.
 
 NodeJS version is specified at `.nvmrc`. NPM version is specified at the `engines` section of `package.json`. Dependencies can not be installed with npm version lower to prevent unnecessary `package-lock.json` git conflicts, but can be opted-out by deleting `.npmrc`.
@@ -52,7 +51,6 @@ Linters are not your enemies, they help developers to avoid mistakes and to foll
 Linters are useless if they are not integrated with the development workflow. This project provides you with the **following integrations**:
 
 - VSCode users should install the recommended extensions. Files are fixed on every save automatically. Refer to [VSCode section](#vs-code-).
-- [husky](https://github.com/typicode/husky) is used to check every commit message with `commitlint`.
 - [husky](https://github.com/typicode/husky) and [lint-staged](https://github.com/okonet/lint-staged) are used to automatically run linters across staged files on every git commit.
 - Use `npm run lint:check` to check all the codebase at once. Configure this command to be run on your CI server.
 - Use `npm run lint:write` to check all the codebase and fix issues automatically (if possible). **Use it after config change.**
@@ -77,5 +75,8 @@ So the solution is pretty straightforward - to list everything, which is require
 
 - `src/components` - Contains all the files which are used two or more times
 - `src/pages` - Contains directories of pages
-- `src/services` - Constains directories which are mainly consist of two files `service` and `adapter`. The name of this pattern is the pattern `Service/Adapter` or another name of this pattern is `Map` by Martin Fowler. Service is responsible for business logic. The Adapter is the part which is responsible of accessing data from external service.
 - `src/wrappers` - Contains files which wrap pages
+- `src/apis` - Contains all apis
+- `src/store` - Containes all mobx stores
+- `src/contexts` - Containes all contexts
+- `src/types` - Containes all types of entities
